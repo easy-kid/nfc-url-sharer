@@ -9,8 +9,8 @@ ext {
     versionKotlin = "17"
     versionSdkMin = 24
     versionSdkTarget = 35
-    versionCodeApp = 1
-    versionNameApp = "1.0.0"
+    versionCodeApp = 2
+    versionNameApp = "1.0.1"
     versionNameLibrary = "1.0.0"
     packageGroupId = "com.luigivampa92"
     packageNamespaceApplication = "ndefemulator"
