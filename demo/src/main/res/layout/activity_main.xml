@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_screen_bg"
+    android:fillViewport="true"
+    tools:context=".ui.DemoActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header with Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginEnd="14dp"
+                android:src="@drawable/ic_app_logo"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_app"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_primary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/subtitle_app"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_text_secondary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- NFC Disabled Alert Banner -->
+        <TextView
+            android:id="@+id/banner_nfc_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_status_inactive"
+            android:padding="12dp"
+            android:text="@string/nfc_disabled_warning"
+            android:textColor="@color/color_danger"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Live Status Card -->
+        <LinearLayout
+            android:id="@+id/card_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_status_inactive"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text_status_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_inactive_title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_text_inactive" />
+
+            <TextView
+                android:id="@+id/text_status_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Ningún enlace activo"
+                android:textSize="15sp"
+                android:textColor="@color/color_text_secondary"
+                android:ellipsize="middle"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <!-- URL Input Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_url_input"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/color_text_primary" />
+
+            <EditText
+                android:id="@+id/input_url"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/hint_url_input"
+                android:inputType="textUri"
+                android:textSize="15sp"
+                android:textColor="@color/color_text_primary"
+                android:textColorHint="#9E9E9E" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_start"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_button_primary"
+                    android:text="@string/btn_start_emulation"
+                    android:textColor="@color/color_white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_stop"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_danger"
+                    android:text="@string/btn_stop_emulation"
+                    android:textColor="@color/color_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Quick Presets -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_presets"
+                android:textSize="13sp"
+                android:textColor="@color/color_text_secondary" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:columnCount="2"
+                android:rowCount="2">
+
+                <Button
+                    android:id="@+id/btn_preset_web"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/bg_button_secondary"
+                    android:text="@string/preset_web"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_preset_wa"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/bg_button_secondary"
+                    android:text="@string/preset_whatsapp"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_preset_linkedin"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_button_secondary"
+                    android:text="@string/preset_linkedin"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_preset_ig"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_button_secondary"
+                    android:text="@string/preset_instagram"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="13sp" />
+            </GridLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

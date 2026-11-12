@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NFC Link Share</string>
+    <string name="title_app">NFC Link Share</string>
+    <string name="subtitle_app">Comparte cualquier sitio web tocando otro teléfono</string>
+    <string name="status_active_title">EMISIÓN NFC ACTIVA</string>
+    <string name="status_inactive_title">EMISIÓN NFC DETENIDA</string>
+    <string name="label_url_input">Enlace (URL) que deseas compartir:</string>
+    <string name="hint_url_input">https://tuweb.com</string>
+    <string name="btn_start_emulation">ACTIVAR Y COMPARTIR</string>
+    <string name="btn_stop_emulation">DETENER EMISIÓN</string>
+    <string name="label_presets">Enlaces rápidos de ejemplo:</string>
+    <string name="preset_whatsapp">WhatsApp</string>
+    <string name="preset_web">Mi Web</string>
+    <string name="preset_linkedin">LinkedIn</string>
+    <string name="preset_instagram">Instagram</string>
+    <string name="instructions_title">💡 ¿Cómo funciona en tu Motorola?</string>
+    <string name="instructions_step_1">1. Ingresa la URL y pulsa ACTIVAR Y COMPARTIR.</string>
+    <string name="instructions_step_2">2. Mantén la pantalla de tu Motorola encendida.</string>
+    <string name="instructions_step_3">3. Acerca el otro celular a la parte trasera (iPhone: borde superior; Android: centro).</string>
+    <string name="instructions_step_4">4. El otro celular abrirá la web sin necesidad de tener apps instaladas.</string>
+    <string name="nfc_disabled_warning">⚠️ El NFC está desactivado en tu Motorola. Toca aquí para activarlo en Ajustes.</string>
+    <string name="toast_emulation_started">Emisión NFC iniciada para: %1$s</string>
+    <string name="toast_emulation_stopped">Emisión NFC detenida</string>
+    <string name="toast_invalid_url">Por favor ingresa una URL válida</string>
+</resources>
