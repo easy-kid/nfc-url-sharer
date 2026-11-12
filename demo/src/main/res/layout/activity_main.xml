@@ -16,43 +16,22 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Header with Logo -->
-        <LinearLayout
+        <!-- Header -->
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:text="@string/title_app"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_text_primary" />
 
-            <ImageView
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginEnd="14dp"
-                android:src="@drawable/ic_app_logo"
-                android:scaleType="fitCenter" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_app"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color_text_primary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/subtitle_app"
-                    android:textSize="13sp"
-                    android:textColor="@color/color_text_secondary" />
-            </LinearLayout>
-        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/subtitle_app"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_secondary" />
 
         <!-- NFC Disabled Alert Banner -->
         <TextView
